@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111827">
+    <title>Tinitiate Dynamic QR Code Generator</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 4h6v6H4z"></path>
+              <path d="M14 4h6v6h-6z"></path>
+              <path d="M4 14h6v6H4z"></path>
+              <path d="M15 15h2v2h-2z"></path>
+              <path d="M19 15h1v5h-5v-1"></path>
+              <path d="M14 20h1"></path>
+            </svg>
+          </span>
+          <div>
+            <p class="eyebrow">Payload Studio</p>
+            <h1>Dynamic QR Generator</h1>
+          </div>
+        </div>
+
+        <div class="topbar-status" aria-label="Generator status">
+          <span class="status-pill">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Auto JSON sync
+          </span>
+          <span class="status-pill is-muted">SVG export</span>
+        </div>
+      </header>
+
+      <section class="overview" aria-label="Generator modules">
+        <div class="overview-item is-whatsapp">
+          <span class="overview-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M20 11.6a7.8 7.8 0 0 1-11.5 6.9L4 20l1.5-4.2A7.8 7.8 0 1 1 20 11.6Z"></path>
+              <path d="M9.6 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4 0 .5l-.4.5c-.1.1-.2.3-.1.4.4.8 1.1 1.5 2.1 2 .1.1.3.1.4-.1l.6-.7c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.3.3.5-.1.6-.5 1.1-1 1.4-.5.3-1.6.3-3-.4-1.7-.8-3.1-2.1-4-3.7-.7-1.3-.7-2.3-.4-2.8Z"></path>
+            </svg>
+          </span>
+          <div>
+            <span>WhatsApp</span>
+            <strong>phone + message</strong>
+          </div>
+        </div>
+
+        <div class="overview-item is-email">
+          <span class="overview-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 6h16v12H4z"></path>
+              <path d="m4 7 8 6 8-6"></path>
+            </svg>
+          </span>
+          <div>
+            <span>Email</span>
+            <strong>email + subject + body</strong>
+          </div>
+        </div>
+
+        <div class="overview-item is-sms">
+          <span class="overview-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M5 5h14v10H9l-4 4V5Z"></path>
+              <path d="M8 9h8"></path>
+              <path d="M8 12h5"></path>
+            </svg>
+          </span>
+          <div>
+            <span>SMS</span>
+            <strong>phone + message</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="generator-grid" aria-label="QR code generator modules">
+        <article class="generator" data-type="whatsapp">
+          <div class="generator-head">
+            <div class="service-title">
+              <span class="service-mark" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path d="M20 11.6a7.8 7.8 0 0 1-11.5 6.9L4 20l1.5-4.2A7.8 7.8 0 1 1 20 11.6Z"></path>
+                  <path d="M9.6 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4 0 .5l-.4.5c-.1.1-.2.3-.1.4.4.8 1.1 1.5 2.1 2 .1.1.3.1.4-.1l.6-.7c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.3.3.5-.1.6-.5 1.1-1 1.4-.5.3-1.6.3-3-.4-1.7-.8-3.1-2.1-4-3.7-.7-1.3-.7-2.3-.4-2.8Z"></path>
+                </svg>
+              </span>
+              <div>
+                <p class="eyebrow">WhatsApp</p>
+                <h2>WhatsApp QR Generator</h2>
+              </div>
+            </div>
+            <span class="badge">wa.me</span>
+          </div>
+
+          <div class="generator-body">
+            <div class="editor-pane">
+              <label class="payload-field" for="whatsappPayload">
+                <span>Payload JSON</span>
+                <textarea id="whatsappPayload" class="payload-editor" spellcheck="false"></textarea>
+              </label>
+              <div class="actions">
+                <button type="button" data-generate="whatsapp">
+                  <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 5 14h6l-1 8 8-12h-6l1-8Z"></path></svg>
+                  <span>Generate</span>
+                </button>
+                <button type="button" data-download="whatsapp">
+                  <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11"></path><path d="m7 10 5 5 5-5"></path><path d="M5 20h14"></path></svg>
+                  <span>Download</span>
+                </button>
+                <button type="button" data-reset="whatsapp">
+                  <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10a6 6 0 1 1-5.2 9"></path><path d="M4 7l4-4"></path><path d="M4 7l4 4"></path></svg>
+                  <span>Reset</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="preview-pane">
+              <div class="qr-frame" id="whatsappQr" aria-label="WhatsApp QR preview"></div>
+              <p class="status" id="whatsappStatus"></p>
+              <p class="link-preview" id="whatsappLink"></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="generator" data-type="email">
+          <div class="generator-head">
+            <div class="service-title">
+              <span class="service-mark" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path d="M4 6h16v12H4z"></path>
+                  <path d="m4 7 8 6 8-6"></path>
+                </svg>
+              </span>
+              <div>
+                <p class="eyebrow">Email</p>
+                <h2>Email QR Generator</h2>
+              </div>
+            </div>
+            <span class="badge">mailto</span>
+          </div>
+
+          <div class="generator-body">
+            <div class="editor-pane">
+              <label class="payload-field" for="emailPayload">
+                <span>Payload JSON</span>
+                <textarea id="emailPayload" class="payload-editor" spellcheck="false"></textarea>
+              </label>
+              <div class="actions">
+                <button type="button" data-generate="email">
+                  <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 5 14h6l-1 8 8-12h-6l1-8Z"></path></svg>
+                  <span>Generate</span>
+                </button>
+                <button type="button" data-download="email">
+                  <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11"></path><path d="m7 10 5 5 5-5"></path><path d="M5 20h14"></path></svg>
+                  <span>Download</span>
+                </button>
+                <button type="button" data-reset="email">
+                  <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10a6 6 0 1 1-5.2 9"></path><path d="M4 7l4-4"></path><path d="M4 7l4 4"></path></svg>
+                  <span>Reset</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="preview-pane">
+              <div class="qr-frame" id="emailQr" aria-label="Email QR preview"></div>
+              <p class="status" id="emailStatus"></p>
+              <p class="link-preview" id="emailLink"></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="generator" data-type="sms">
+          <div class="generator-head">
+            <div class="service-title">
+              <span class="service-mark" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path d="M5 5h14v10H9l-4 4V5Z"></path>
+                  <path d="M8 9h8"></path>
+                  <path d="M8 12h5"></path>
+                </svg>
+              </span>
+              <div>
+                <p class="eyebrow">SMS</p>
+                <h2>SMS QR Generator</h2>
+              </div>
+            </div>
+            <span class="badge">sms</span>
+          </div>
+
+          <div class="generator-body">
+            <div class="editor-pane">
+              <label class="payload-field" for="smsPayload">
+                <span>Payload JSON</span>
+                <textarea id="smsPayload" class="payload-editor" spellcheck="false"></textarea>
+              </label>
+              <div class="actions">
+                <button type="button" data-generate="sms">
+                  <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 5 14h6l-1 8 8-12h-6l1-8Z"></path></svg>
+                  <span>Generate</span>
+                </button>
+                <button type="button" data-download="sms">
+                  <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11"></path><path d="m7 10 5 5 5-5"></path><path d="M5 20h14"></path></svg>
+                  <span>Download</span>
+                </button>
+                <button type="button" data-reset="sms">
+                  <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10a6 6 0 1 1-5.2 9"></path><path d="M4 7l4-4"></path><path d="M4 7l4 4"></path></svg>
+                  <span>Reset</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="preview-pane">
+              <div class="qr-frame" id="smsQr" aria-label="SMS QR preview"></div>
+              <p class="status" id="smsStatus"></p>
+              <p class="link-preview" id="smsLink"></p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>

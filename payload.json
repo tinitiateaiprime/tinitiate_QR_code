@@ -1,0 +1,16 @@
+{
+  "whatsapp": {
+    "phone": "917815919728",
+    "message": "Hello, this is a dynamic WhatsApp message."
+  },
+  "email": {
+    "email": "example@gmail.com",
+    "subject": "Test Subject",
+    "message": "This is a test email message."
+  },
+  "sms": {
+    "phone": "917815919728",
+    "message": "This is tinitiate SMS message."
+  }
+}
+
